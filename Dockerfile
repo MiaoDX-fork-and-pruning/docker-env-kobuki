@@ -12,13 +12,9 @@ ENV PYTHONWARNINGS="ignore:setup.py install is deprecated::setuptools.command.in
 # install all dependencies
 RUN apt-get update \ 
     && apt-get install -y \
-        libudev-dev \
         udev \
-        python3-bloom \
-        python3-rosdep \
-        fakeroot \
-        debhelper \
-        dh-python \
+        wget \
+        unzip \
         ros-${ROS_DISTRO}-kobuki-ros-interfaces \
         ros-${ROS_DISTRO}-kobuki-velocity-smoother \
         ros-${ROS_DISTRO}-kobuki-core \
@@ -28,13 +24,6 @@ RUN apt-get update \
         ros-${ROS_DISTRO}-diagnostic-updater \
         ros-${ROS_DISTRO}-xacro \
         ros-${ROS_DISTRO}-joint-state-publisher \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update \ 
-    && apt-get install -y \
-        wget \
-        unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
