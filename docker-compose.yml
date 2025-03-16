@@ -23,3 +23,26 @@ services:
       - /dev/bus/usb/
     network_mode: host
 
+  kobuki-base-amd64:
+    platform: "linux/amd64"
+    # just the basic robot (headless, includes drivers, publishes description) for the robots raspberry pi
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      platforms:
+        - "linux/amd64"
+      args:
+        ROS_DISTRO: humble
+        ARCH: amd64
+        UBUNTU: jammy
+    environment:
+      - PYTHONUNBUFFERED=1 # important to show error messages if a ros service crashes!
+    privileged: True
+    image: brean/kobuki-base:humble_amd64_001
+    volumes:
+      - ./roslog:/root/.ros/
+      - /dev:/dev
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    devices:
+      - /dev/bus/usb/
+    network_mode: host
