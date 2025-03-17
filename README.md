@@ -14,4 +14,4 @@ After starting the docker environment on your robot you should hear the sound of
 Now you can control your robot on from your PC by running `ros2 run rqt_robot_steering rqt_robot_steering` and setting the topic to `/command/velocity`
 ![Screenshot of rqt_robot_steering with corect topic](https://github.com/user-attachments/assets/931b414c-93fc-4f22-bd5f-802e14e28659)
 
-It's recommended to start by moving slowly on the spot instead of moving forward/backward right away.
+It's recommended to start by rotating slowly on the spot instead of moving forward/backward right away.
