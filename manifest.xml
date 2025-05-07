@@ -1,0 +1,31 @@
+<package>
+  <description brief="ROS 2 docker environment for the kobuki base.">
+    ROS 2 humble docker environment for the kobuki base.
+
+    This Docker environment has been developed for the HelloRIC project.
+  </description>
+  <author>Andreas Bresser/andreas.bresser@dfki.de</author>
+  <maintainer>Andreas Bresser/andreas.bresser@dfki.de</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <url>https://github.com/helloric/docker-env-kobuki</url>
+  <logo>https://raw.githubusercontent.com/dfki-ric/.github/master/profile/DFKI_RIC_RGB.jpg</logo>
+  
+  <keywords>
+    <keyword>utilities</keyword>
+    <keyword>Docker</keyword>
+  </keywords>
+
+  <stage>0</stage>
+  <use>single project</use>
+
+  <activity>active</activity>
+
+  <classifiers>
+    <classifier>utilities</classifier>
+    <classifier>ros</classifier>
+    <classifier>docker</classifier>
+    <classifier>Development Status :: 3 - Alpha</classifier>
+  </classifiers>
+</package>
+
