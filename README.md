@@ -1,5 +1,5 @@
 # Docker environment for kobuki
-ROS 2 humble docker environment for the kobuki base.
+ROS 2 jazzy docker environment for the kobuki base.
 
 This Docker environment has been developed for the HelloRIC project.
 
