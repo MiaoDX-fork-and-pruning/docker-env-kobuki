@@ -17,7 +17,7 @@ RUN apt-get update \
         unzip \
         ros-${ROS_DISTRO}-kobuki-ros-interfaces \
         ros-${ROS_DISTRO}-kobuki-velocity-smoother \
-        ros-${ROS_DISTRO}-kobuki-core \
+        ros-${ROS_DISTRO}-ecl* \
         ros-${ROS_DISTRO}-ros2test \
         ros-${ROS_DISTRO}-ros-testing \
         ros-${ROS_DISTRO}-angles \
@@ -34,7 +34,7 @@ ARG UBUNTU
 
 RUN mkdir /tmp/debs/ \
     && cd /tmp/debs/ \
-    && wget https://github.com/helloric/docker-kobuki-compile/releases/download/kobuki-ros-1.0.0-0/ros-${ROS_DISTRO}-kobuki-ros-1.0.0-0${UBUNTU}_${ARCH}.zip \
+    && wget https://github.com/helloric/docker-kobuki-compile/releases/download/ros-${ROS_DISTRO}-kobuki-ros-1.0.0-0/ros-${ROS_DISTRO}-kobuki-ros-1.0.0-0${UBUNTU}_${ARCH}.zip \
     && unzip ros-${ROS_DISTRO}-kobuki-ros-1.0.0-0${UBUNTU}_${ARCH}.zip \
     && dpkg -i *.deb \
     && rm -Rf /tmp/debs/

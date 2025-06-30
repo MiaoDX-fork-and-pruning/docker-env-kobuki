@@ -10,7 +10,7 @@ services:
       args:
         ROS_DISTRO: jazzy
         ARCH: arm64
-        UBUNTU: jammy
+        UBUNTU: noble
     environment:
       - PYTHONUNBUFFERED=1 # important to show error messages if a ros service crashes!
     privileged: True
@@ -34,7 +34,7 @@ services:
       args:
         ROS_DISTRO: jazzy
         ARCH: amd64
-        UBUNTU: jammy
+        UBUNTU: noble
     environment:
       - PYTHONUNBUFFERED=1 # important to show error messages if a ros service crashes!
     privileged: True
